@@ -15,6 +15,13 @@ class CreateAlamatsTable extends Migration
     {
         Schema::create('alamats', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nama');
+            $table->string('nohp');
+            $table->string('provinsi');
+            $table->string('kota');
+            $table->string('kecamatan');
+            $table->string('kode_pos');
+            $table->string('alamat_lain');
             $table->timestamps();
         });
     }
