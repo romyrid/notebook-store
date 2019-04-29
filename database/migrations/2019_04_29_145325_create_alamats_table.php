@@ -15,6 +15,8 @@ class CreateAlamatsTable extends Migration
     {
         Schema::create('alamats', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('nama');
             $table->string('nohp');
             $table->string('provinsi');

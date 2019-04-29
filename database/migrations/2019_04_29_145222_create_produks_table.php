@@ -15,7 +15,9 @@ class CreateProduksTable extends Migration
     {
         Schema::create('produks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps('merk');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('merk');
             $table->string('seri');
             $table->string('berat');
             $table->string('ukuran_layar');

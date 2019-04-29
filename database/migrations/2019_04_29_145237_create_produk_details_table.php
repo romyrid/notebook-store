@@ -15,6 +15,8 @@ class CreateProdukDetailsTable extends Migration
     {
         Schema::create('produk_details', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('produk_id');
+            $table->foreign('produk_id')->references('id')->on('produks');
             $table->string('resolusi_layar');
             $table->string('vga');
             $table->string('ukuran_kartu vga');
