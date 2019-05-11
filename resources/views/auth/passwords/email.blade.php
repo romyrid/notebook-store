@@ -34,14 +34,10 @@ Reset Password Page
                   </form>
                   <hr>
                   <div class="text-center">
-                    @if (Route::has('password.request'))
-                      <a class="small" href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
-                      </a>
-                    @endif
+                    <a class="small" href="/register">Create an Account!</a>
                   </div>
                   <div class="text-center">
-                    <a class="small" href="/register">Already have an account? Login!</a>
+                    <a class="small" href="/login">Already have an account? Login!</a>
                   </div>
                 </div>
               </div>
